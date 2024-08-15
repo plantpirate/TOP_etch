@@ -1,6 +1,6 @@
 const divContainer = document.querySelector(".container");
-// const divsAmount = prompt("What size grid do you want?");
-for (let i = 1; i <= 100; i++) {
+const divsAmount = prompt("What size grid do you want?");
+for (let i = 1; i <= divsAmount; i++) {
   const newDiv = document.createElement("div");
   newDiv.classList.add("div");
   newDiv.style.border = "1px solid black";
