@@ -3,5 +3,8 @@ const divContainer = document.querySelector(".container");
 for (let i = 1; i <= 100; i++) {
   const newDiv = document.createElement("div");
   newDiv.classList.add("div");
+  newDiv.style.border = "1px solid black";
+  newDiv.style.minWidth = "10%";
+  newDiv.style.flex = "1 1 auto";
   divContainer.appendChild(newDiv);
 }
