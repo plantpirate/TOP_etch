@@ -1,7 +1,8 @@
 const divContainer = document.querySelector(".container");
-// const divsAmount = prompt("What size grid do you want?");
+
 const initGame = function () {
-  for (let i = 0; i < 4; i++) {
+  const divsAmount = prompt("What size grid do you want?");
+  for (let i = 0; i < divsAmount; i++) {
     const divRow = document.createElement("div");
     divRow.classList.add("row");
     divContainer.appendChild(divRow);
