@@ -1,5 +1,5 @@
 const divContainer = document.querySelector(".container");
-// const divsAmount = prompt("What size grid do you want?");
+const divsAmount = prompt("What size grid do you want?");
 const initGame = function () {
   for (let i = 1; i <= divsAmount; i++) {
     if (divsAmount <= 100) {
