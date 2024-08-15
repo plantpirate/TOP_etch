@@ -13,10 +13,3 @@
   width: 80%;
   height: 100vh;
 }
-
-.div {
-  background-color: white;
-  border: 1px solid black;
-  min-width: 10%;
-  flex: 1 1 auto;
-}
