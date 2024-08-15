@@ -1,12 +1,14 @@
 const divContainer = document.querySelector(".container");
 
 const initGame = function () {
-  const divsAmount = prompt("What size grid do you want?");
-  for (let i = 0; i < divsAmount; i++) {
+  const gridHeight = prompt("How tall do you want your grid to be?");
+  const gridWidth = prompt("How wide do you want your grid to be?");
+
+  for (let i = 0; i < gridHeight; i++) {
     const divRow = document.createElement("div");
     divRow.classList.add("row");
     divContainer.appendChild(divRow);
-    for (j = 0; j < 4; j++) {
+    for (j = 0; j < gridWidth; j++) {
       const newSquare = document.createElement("div");
       newSquare.classList.add("square");
       divRow.appendChild(newSquare);
