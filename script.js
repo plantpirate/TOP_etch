@@ -1,6 +1,6 @@
 const divContainer = document.querySelector(".container");
 
-const initGrid = function () {
+const createInitGrid = function () {
   for (let i = 0; i < 16; i++) {
     const divRow = document.createElement("div");
     divRow.classList.add("row");
@@ -19,9 +19,9 @@ const initGrid = function () {
     }
   }
 };
-initGrid();
+createInitGrid();
 
-const initGame = function () {
+const createUserGrid = function () {
   const gridHeight = prompt("How tall do you want your grid to be?");
   const gridWidth = prompt("How wide do you want your grid to be?");
 
@@ -43,5 +43,3 @@ const initGame = function () {
     }
   }
 };
-
-// initGame();
