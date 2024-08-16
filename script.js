@@ -16,6 +16,12 @@ const createUserGrid = function () {
       divRow.appendChild(newSquare);
     }
   }
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((sq) => {
+    sq.addEventListener("mouseover", function () {
+      sq.style.backgroundColor = "yellow";
+    });
+  });
 };
 
 const createInitGrid = function () {
