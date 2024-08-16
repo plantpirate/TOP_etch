@@ -6,13 +6,17 @@
 * {
   margin: 0;
 }
-
+.user {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin: 0 auto;
+}
 .container {
   display: flex;
   flex-direction: column;
   width: 70%;
   height: 100vh;
-  border: 1px solid black;
   margin: 0 auto;
 }
 
