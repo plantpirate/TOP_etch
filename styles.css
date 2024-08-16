@@ -16,15 +16,7 @@
 }
 
 .row {
-  display: flex;
-  flex-grow: 1;
-  align-items: stretch;
-  border: 1px solid black;
 }
 
 .square {
-  min-width: 2rem;
-  flex-grow: 1;
-  align-content: stretch;
-  border: 1px solid yellow;
 }
