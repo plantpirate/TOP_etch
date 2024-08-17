@@ -2,7 +2,10 @@ const divContainer = document.querySelector(".gridContainer");
 const userGridBtn = document.querySelector(".newGrid");
 
 const createUserGrid = function () {
-  divContainer.innerHTML = "";
+  const initRows = document.querySelectorAll(".gridRow");
+  initRows.forEach((row) => {
+    row.remove();
+  });
   const gridSides = Number(
     prompt("How many squares on each side would you like?")
   );
