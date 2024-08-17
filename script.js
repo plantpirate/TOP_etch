@@ -16,7 +16,7 @@ const createUserGrid = function () {
   });
 
   const gridSides = Number(
-    prompt("How many squares on each side would you like?")
+    prompt("How many squares on each side would you like?", "0-100")
   );
   if (gridSides <= 100) {
     for (let i = 0; i < gridSides; i++) {
