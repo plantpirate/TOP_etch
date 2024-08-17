@@ -1,6 +1,13 @@
 const divContainer = document.querySelector(".gridContainer");
 const userGridBtn = document.querySelector(".newGrid");
 
+const randColorGen = function () {
+  function random(number) {
+    return Math.floor(Math.random() * (number + 1));
+  }
+  const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+  return rndCol;
+};
 const createUserGrid = function () {
   const initRows = document.querySelectorAll(".gridRow");
   initRows.forEach((row) => {
@@ -23,11 +30,7 @@ const createUserGrid = function () {
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
-      function random(number) {
-        return Math.floor(Math.random() * (number + 1));
-      }
-      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-      sq.style.backgroundColor = rndCol;
+      sq.style.backgroundColor = randColorGen();
     });
   });
 };
@@ -46,11 +49,7 @@ const createInitGrid = function () {
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
-      function random(number) {
-        return Math.floor(Math.random() * (number + 1));
-      }
-      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
-      sq.style.backgroundColor = rndCol;
+      sq.style.backgroundColor = randColorGen();
     });
   });
   userGridBtn.addEventListener("click", createUserGrid);
