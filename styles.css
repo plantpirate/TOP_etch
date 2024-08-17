@@ -12,7 +12,7 @@
   height: 2rem;
   margin: 0 auto;
 }
-.container {
+.gridContainer {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -20,13 +20,13 @@
   margin: 0 auto;
 }
 
-.row {
+.gridRow {
   display: flex;
   flex-grow: 1;
   align-items: stretch;
 }
 
-.square {
+.gridSquare {
   flex-grow: 1;
   border: 1px solid black;
 }
