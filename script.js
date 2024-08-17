@@ -8,25 +8,29 @@ const randColorGen = function () {
   const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
   return rndCol;
 };
+
 const createUserGrid = function () {
   const initRows = document.querySelectorAll(".gridRow");
   initRows.forEach((row) => {
     row.remove();
   });
+
   const gridSides = Number(
     prompt("How many squares on each side would you like?")
   );
-
-  for (let i = 0; i < gridSides; i++) {
-    const divRow = document.createElement("div");
-    divRow.classList.add("gridRow");
-    divContainer.appendChild(divRow);
-    for (j = 0; j < gridSides; j++) {
-      const newSquare = document.createElement("div");
-      newSquare.classList.add("gridSquare");
-      divRow.appendChild(newSquare);
+  if (gridSides <= 100) {
+    for (let i = 0; i < gridSides; i++) {
+      const divRow = document.createElement("div");
+      divRow.classList.add("gridRow");
+      divContainer.appendChild(divRow);
+      for (j = 0; j < gridSides; j++) {
+        const newSquare = document.createElement("div");
+        newSquare.classList.add("gridSquare");
+        divRow.appendChild(newSquare);
+      }
     }
   }
+
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
@@ -46,12 +50,14 @@ const createInitGrid = function () {
       divRow.appendChild(newSquare);
     }
   }
+
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
       sq.style.backgroundColor = randColorGen();
     });
   });
+
   userGridBtn.addEventListener("click", createUserGrid);
 };
 createInitGrid();
