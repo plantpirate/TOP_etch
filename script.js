@@ -1,4 +1,4 @@
-const divContainer = document.querySelector(".container");
+const divContainer = document.querySelector(".gridContainer");
 const userGridBtn = document.querySelector(".newGrid");
 
 const createUserGrid = function () {
@@ -8,15 +8,15 @@ const createUserGrid = function () {
 
   for (let i = 0; i < gridHeight; i++) {
     const divRow = document.createElement("div");
-    divRow.classList.add("row");
+    divRow.classList.add("gridRow");
     divContainer.appendChild(divRow);
     for (j = 0; j < gridWidth; j++) {
       const newSquare = document.createElement("div");
-      newSquare.classList.add("square");
+      newSquare.classList.add("gridSquare");
       divRow.appendChild(newSquare);
     }
   }
-  const squares = document.querySelectorAll(".square");
+  const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
       sq.style.backgroundColor = "yellow";
@@ -27,15 +27,15 @@ const createUserGrid = function () {
 const createInitGrid = function () {
   for (let i = 0; i < 16; i++) {
     const divRow = document.createElement("div");
-    divRow.classList.add("row");
+    divRow.classList.add("gridRow");
     divContainer.appendChild(divRow);
     for (j = 0; j < 16; j++) {
       const newSquare = document.createElement("div");
-      newSquare.classList.add("square");
+      newSquare.classList.add("gridSquare");
       divRow.appendChild(newSquare);
     }
   }
-  const squares = document.querySelectorAll(".square");
+  const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
       sq.style.backgroundColor = "yellow";
