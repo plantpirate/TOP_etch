@@ -3,14 +3,13 @@ const userGridBtn = document.querySelector(".newGrid");
 
 const createUserGrid = function () {
   divContainer.innerHTML = "";
-  const gridHeight = prompt("How tall do you want your grid to be?");
-  const gridWidth = prompt("How wide do you want your grid to be?");
+  const gridSides = prompt("How many squares on each side would you like?");
 
-  for (let i = 0; i < gridHeight; i++) {
+  for (let i = 0; i < gridSides; i++) {
     const divRow = document.createElement("div");
     divRow.classList.add("gridRow");
     divContainer.appendChild(divRow);
-    for (j = 0; j < gridWidth; j++) {
+    for (j = 0; j < gridSides; j++) {
       const newSquare = document.createElement("div");
       newSquare.classList.add("gridSquare");
       divRow.appendChild(newSquare);
