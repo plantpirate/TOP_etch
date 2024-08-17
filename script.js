@@ -23,7 +23,11 @@ const createUserGrid = function () {
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
-      sq.style.backgroundColor = "yellow";
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      sq.style.backgroundColor = rndCol;
     });
   });
 };
@@ -42,7 +46,11 @@ const createInitGrid = function () {
   const squares = document.querySelectorAll(".gridSquare");
   squares.forEach((sq) => {
     sq.addEventListener("mouseover", function () {
-      sq.style.backgroundColor = "yellow";
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+      const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+      sq.style.backgroundColor = rndCol;
     });
   });
   userGridBtn.addEventListener("click", createUserGrid);
