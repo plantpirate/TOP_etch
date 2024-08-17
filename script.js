@@ -9,6 +9,14 @@ const randColorGen = function () {
   return rndCol;
 };
 
+const colorSquares = function () {
+  const squares = document.querySelectorAll(".gridSquare");
+  squares.forEach((sq) => {
+    sq.addEventListener("mouseover", function () {
+      sq.style.backgroundColor = randColorGen();
+    });
+  });
+};
 const createUserGrid = function () {
   const initRows = document.querySelectorAll(".gridRow");
   initRows.forEach((row) => {
@@ -30,13 +38,7 @@ const createUserGrid = function () {
       }
     }
   }
-
-  const squares = document.querySelectorAll(".gridSquare");
-  squares.forEach((sq) => {
-    sq.addEventListener("mouseover", function () {
-      sq.style.backgroundColor = randColorGen();
-    });
-  });
+  colorSquares();
 };
 
 const createInitGrid = function () {
@@ -51,12 +53,7 @@ const createInitGrid = function () {
     }
   }
 
-  const squares = document.querySelectorAll(".gridSquare");
-  squares.forEach((sq) => {
-    sq.addEventListener("mouseover", function () {
-      sq.style.backgroundColor = randColorGen();
-    });
-  });
+  colorSquares();
 
   userGridBtn.addEventListener("click", createUserGrid);
 };
