@@ -1,5 +1,5 @@
 const divContainer = document.querySelector(".container");
-const userGridBtn = document.querySelector(".user");
+const userGridBtn = document.querySelector(".newGrid");
 
 const createUserGrid = function () {
   divContainer.innerHTML = "";
