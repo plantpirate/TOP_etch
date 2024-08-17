@@ -3,7 +3,9 @@ const userGridBtn = document.querySelector(".newGrid");
 
 const createUserGrid = function () {
   divContainer.innerHTML = "";
-  const gridSides = prompt("How many squares on each side would you like?");
+  const gridSides = Number(
+    prompt("How many squares on each side would you like?")
+  );
 
   for (let i = 0; i < gridSides; i++) {
     const divRow = document.createElement("div");
