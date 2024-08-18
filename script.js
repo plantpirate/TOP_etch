@@ -17,6 +17,7 @@ const colorSquares = function () {
     });
   });
 };
+
 const createUserGrid = function () {
   const initRows = document.querySelectorAll(".gridRow");
   initRows.forEach((row) => {
